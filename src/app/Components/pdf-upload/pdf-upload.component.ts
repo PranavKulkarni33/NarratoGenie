@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PdfParserService } from 'src/app/Services/pdf-parser.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pdf-upload',
@@ -9,9 +10,9 @@ import { PdfParserService } from 'src/app/Services/pdf-parser.service';
 export class PdfUploadComponent {
   fileName: string | null = null;
   selectedFile: File | null = null;
-  pdfContent: string | null = null;
+  isLoading: boolean = false;
 
-  constructor(private pdfParserService: PdfParserService) {}
+  constructor(private pdfParserService: PdfParserService, private router: Router) {}
 
   onDragOver(event: DragEvent): void {
     event.preventDefault();
@@ -47,13 +48,17 @@ export class PdfUploadComponent {
 
   processPDF(): void {
     if (this.selectedFile) {
-      this.pdfParserService.parsePDF(this.selectedFile).subscribe({
-        next: (content) => {
-          this.pdfContent = content; // Set the extracted content
-          console.log('Extracted PDF Content:', this.pdfContent); // Log the content
+      this.isLoading = true;
+      this.pdfParserService.parseAndProcessPDF(this.selectedFile).subscribe({
+        next: (response) => {
+          this.isLoading = false;
+          const videoUrl = response.videoUrl;
+          this.router.navigate(['/preview'], { queryParams: { video: videoUrl } });
         },
         error: (err) => {
-          console.error('Error extracting PDF content:', err);
+          this.isLoading = false;
+          console.error('Error processing PDF:', err);
+          alert('Failed to process the PDF. Please try again.');
         },
       });
     }

@@ -45,11 +45,15 @@ export class PdfParserService {
     );
   }
 
-  parseAndSendPDF(file: File): Observable<any> {
+  parseAndProcessPDF(file: File): Observable<any> {
     return this.parsePDF(file).pipe(
-      switchMap((content) =>
-        this.http.post('https://your-backend-endpoint/summarize', { content })
-      )
+      switchMap((content) => {
+        // Limit content to approximately 1000 words
+        const limitedContent = content.split(/\s+/).slice(0, 500).join(' ');
+        console.log('Sending limited content to backend:', limitedContent);
+
+        return this.http.post('http://localhost:3000/process', { content: limitedContent });
+      })
     );
   }
 }

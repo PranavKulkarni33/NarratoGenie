@@ -5,9 +5,9 @@ import { PreviewComponent } from './Components/preview/preview.component';
 import { InteractiveNarrativeComponent } from './Components/interactive-narrative/interactive-narrative.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/pdfUpload', pathMatch: 'full' },
-  { path: 'pdfUpload', component: PdfUploadComponent },
-  { path: 'pdfPreview', component: PreviewComponent },
+  { path: '', redirectTo: '/upload', pathMatch: 'full' },
+  { path: 'upload', component: PdfUploadComponent },
+  { path: 'preview', component: PreviewComponent },
   { path: 'narrative', component: InteractiveNarrativeComponent }
 ];
 

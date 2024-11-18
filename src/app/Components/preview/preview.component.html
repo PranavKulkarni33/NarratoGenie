@@ -1,1 +1,8 @@
-<p>preview works!</p>
+<div class="preview-container" *ngIf="videoUrl">
+    <h2>Processed Video</h2>
+    <video controls [src]="videoUrl" class="video-preview"></video>
+  </div>
+  <div *ngIf="!videoUrl">
+    <p>No video available to preview.</p>
+  </div>
+  

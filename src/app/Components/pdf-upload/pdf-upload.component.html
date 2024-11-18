@@ -1,28 +1,30 @@
 <div class="upload-container">
-    <div
-      class="drop-zone"
-      (dragover)="onDragOver($event)"
-      (dragleave)="onDragLeave($event)"
-      (drop)="onDrop($event)"
-    >
-      <div class="drop-message">
-        <i class="ai-icon"></i>
-        <p>Drag & Drop Your PDF Here</p>
-        <span>or</span>
-        <button (click)="fileInput.click()">Upload PDF</button>
-        <input
-          type="file"
-          #fileInput
-          accept=".pdf"
-          (change)="onFileSelect($event)"
-          hidden
-        />
-      </div>
-    </div>
-    <div class="file-preview" *ngIf="fileName">
-      <p><strong>File Selected:</strong> {{ fileName }}</p>
-      <p class="file-status">The uploaded file {{fileName}}</p>
-      <button class="upload-btn" (click)="processPDF()">Process PDF</button>
+  <div
+    class="drop-zone"
+    (dragover)="onDragOver($event)"
+    (dragleave)="onDragLeave($event)"
+    (drop)="onDrop($event)"
+  >
+    <div class="drop-message">
+      <i class="ai-icon"></i>
+      <p>Drag & Drop Your PDF Here</p>
+      <span>or</span>
+      <button (click)="fileInput.click()">Upload PDF</button>
+      <input
+        type="file"
+        #fileInput
+        accept=".pdf"
+        (change)="onFileSelect($event)"
+        hidden
+      />
     </div>
   </div>
-  
+  <div class="file-preview" *ngIf="fileName">
+    <p><strong>File Selected:</strong> {{ fileName }}</p>
+    <p class="file-status">The uploaded file {{ fileName }}</p>
+    <button class="upload-btn" (click)="processPDF()">Process PDF</button>
+  </div>
+  <div *ngIf="isLoading" class="loader">
+    <p>Processing... Please wait.</p>
+  </div>
+</div>
