@@ -1,0 +1,87 @@
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .drop-zone {
+    width: 80%;
+    max-width: 500px;
+    height: 200px;
+    border: 2px dashed #6a5acd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  .drop-zone:hover {
+    background-color: #21295c;
+    transform: scale(1.02);
+  }
+  
+  .drop-message {
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .drop-message .ai-icon {
+    font-size: 48px;
+    color: #00d2ff;
+  }
+  
+  .drop-message p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .drop-message span {
+    font-size: 14px;
+    color: #aaaaaa;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00d2ff;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #0077b6;
+  }
+  
+  .file-preview {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .file-preview p {
+    margin: 5px 0;
+  }
+  
+  .file-preview .file-status {
+    font-size: 14px;
+    color: #00d2ff;
+  }
+  
+  .upload-btn {
+    margin-top: 10px;
+    background-color: #00c851;
+  }
+  
+  .upload-btn:hover {
+    background-color: #007e33;
+  }
+  
