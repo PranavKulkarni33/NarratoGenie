@@ -48,7 +48,7 @@ export class PdfParserService {
   parseAndProcessPDF(file: File): Observable<any> {
     return this.parsePDF(file).pipe(
       switchMap((content) => {
-        // Limit content to approximately 1000 words
+        // Limit content to approximately 500 words
         const limitedContent = content.split(/\s+/).slice(0, 500).join(' ');
         console.log('Sending limited content to backend:', limitedContent);
 

@@ -1,0 +1,232 @@
+/* General Styles */
+
+/* Home Container */
+.home-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(45deg, #8181cc, #020717); /* Gradient background */
+    border-radius: 15px;
+    margin-bottom: 40px;
+    color: white;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: linear-gradient(145deg, #ebebe7, #ffc001);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  .hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #00d2ff;
+  }
+  
+  .cta-btn {
+    padding: 15px 30px;
+    background-color: #00c851;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background-color: #007e33;
+  }
+  
+  /* About Section */
+  .about-section {
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(50, 50, 80, 0.9));
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .about-section p {
+    font-size: 1.2rem;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    margin-bottom: 40px;
+    text-align: center;
+    color: white;
+  }
+  
+  .how-it-works .steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .step {
+    background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(50, 50, 80, 0.9));
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .step h3 {
+    color: #00d2ff;
+  }
+  
+  /* Technologies Used Section */
+  .tech-section {
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(50, 50, 80, 0.9));
+    border-radius: 15px;
+    padding: 30px;
+    color: white;
+  }
+  
+  .tech-list {
+    list-style: none;
+    padding: 0;
+    color: white;
+  }
+  
+  .tech-list li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+
+/* Limitations Section */
+.limitations-section {
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(50, 50, 80, 0.9));
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .limitations-section h2 {
+    font-size: 2rem;
+    color: #00d2ff;
+    margin-bottom: 20px;
+  }
+  
+  .limitations-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    text-align: left;
+  }
+  
+  
+/* About Me Section */
+.about-me {
+    margin-bottom: 40px;
+    color: white;
+    background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(50, 50, 80, 0.9));
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+  }
+  
+  .creator {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .creator img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .social-links a {
+    color: #00d2ff;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* CTA Section */
+  .cta-section {
+    text-align: center;
+    margin: 40px 0;
+    background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(50, 50, 80, 0.9));
+    border-radius: 15px;
+    padding: 40px;
+  }
+  
+  .cta-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    background: linear-gradient(145deg, #ebebe7, #ffc001);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-section,
+    .step,
+    .creator {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .step {
+      width: 100%;
+    }
+  
+    .tech-list {
+      font-size: 1rem;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: 100px 20px;
+        background: linear-gradient(45deg, #8181cc, #020717); /* Gradient background */
+        border-radius: 15px;
+        margin-bottom: 40px;
+        color: white;
+      }
+      
+      .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        background: linear-gradient(145deg, #ebebe7, #ffc001);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+  }
+  

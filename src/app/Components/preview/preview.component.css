@@ -1,0 +1,130 @@
+/* General Header Styling */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem; /* Reduced size */
+    font-weight: bold;
+    background: linear-gradient(145deg, #ebebe7, #ffc001);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  /* Preview Container */
+  .preview-container {
+    max-width: 400px; /* Reduced width */
+    margin: 20px auto; /* Reduced margin */
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 10px;
+    padding: 15px; /* Reduced padding */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Heading */
+  .preview-container h2 {
+    font-size: 1.5rem; /* Reduced size */
+    margin-bottom: 15px; /* Reduced margin */
+    color: #00d2ff;
+  }
+  
+  /* Video Wrapper */
+  .video-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Video Styling */
+  .video-preview {
+    width: 100%;
+    max-width: 250px; /* Reduced max width */
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+  }
+  
+  /* Controls Container */
+  .controls {
+    display: flex;
+    gap: 5px; /* Reduced gap */
+    justify-content: center;
+    margin-top: 5px; /* Reduced margin */
+  }
+  
+  /* Control Buttons */
+  .control-btn {
+    padding: 8px 15px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #00d2ff;
+    color: white;
+    cursor: pointer;
+    font-size: 12px; /* Reduced font size */
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .control-btn:hover {
+    background-color: #0077b6;
+  }
+  
+  /* Create Another One Button */
+  .create-another-btn {
+    margin-top: 15px; /* Reduced margin */
+    padding: 8px 15px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #00c851;
+    color: white;
+    cursor: pointer;
+    font-size: 12px; /* Reduced font size */
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .create-another-btn:hover {
+    background-color: #007e33;
+  }
+  
+  /* No Video Message */
+  .no-video-container {
+    text-align: center;
+    color: white;
+  }
+  
+  .no-video {
+    font-size: 1rem; /* Reduced size */
+    color: #aaaaaa;
+  }
+  
+  @media (max-width: 768px) {
+    .video-preview {
+      max-width: 200px; /* Further reduced for smaller screens */
+    }
+  
+    .control-btn,
+    .create-another-btn {
+      font-size: 10px; /* Further reduced size */
+      padding: 6px 10px; /* Further reduced padding */
+    }
+  
+    .preview-container {
+      max-width: 300px; /* Further reduced width */
+      padding: 10px; /* Further reduced padding */
+    }
+  
+    .preview-container h2 {
+      font-size: 1.3rem; /* Further reduced size */
+      margin-bottom: 10px;
+    }
+  }
+  

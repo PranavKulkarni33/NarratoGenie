@@ -1,1 +1,105 @@
-<p>interactive-narrative works!</p>
+<div class="home-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1>NarratoGenie.AI</h1>
+      <p>Your gateway to interactive video narratives</p>
+      <button class="cta-btn" (click)="navigateToUpload()">Try it Out</button>
+    </section>
+  
+    <!-- About Section -->
+    <section class="about-section">
+      <h2>What is NarratoGenie.AI?</h2>
+      <p>
+        NarratoGenie.AI transforms your PDFs into captivating, AI-generated
+        interactive videos. Learn, teach, and create engaging content faster
+        than ever before!
+      </p>
+    </section>
+  
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>1. Upload</h3>
+          <p>Upload your PDF or document in a few clicks.</p>
+        </div>
+        <div class="step">
+          <h3>2. Transform</h3>
+          <p>
+            Our AI processes your content and generates a dynamic video
+            narrative.
+          </p>
+        </div>
+        <div class="step">
+          <h3>3. Preview</h3>
+          <p>
+            Watch and download your interactive video, ready to use or share.
+          </p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Technologies Used Section -->
+    <section class="tech-section">
+        <h2>Powered By</h2>
+        <ul class="tech-list">
+          <li>Angular</li>
+          <li>Express</li>
+          <li>AWS Polly</li>
+          <li>AWS Transcribe</li>
+          <li>AWS S3</li>
+          <li>AWS EC2 for hosting server</li>
+          <li>AWS S3 for static website hosting</li>
+          <li>AWS Route 53 for DNS</li>
+          <li>Hugging Face for summarization</li>
+        </ul>
+    </section>
+
+    <section class="limitations-section">
+        <h2>Limitations</h2>
+        <p>
+          Currently, the application processes only the first 500 words for summarization due to limited resources, 
+          and the videos are kept short to stay within the free tier limits of the services used. 
+          At this stage, NarratoGenie.AI is restricted to handling only PDF files, 
+          and other file types are not yet supported. Additionally, real-time editing 
+          or advanced customizations for the generated videos are unavailable.
+        </p>
+        <p>
+          If we get funded, we plan to utilize OpenAI APIs to summarize entire documents with higher accuracy, 
+          support more file types such as DOCX and PPTX, create longer and more detailed videos with advanced animations, 
+          add interactive features to enhance video engagement, and scale the platform for broader usage and better performance.
+        </p>
+      </section>
+      
+      
+  
+    <!-- About Me Section -->
+    <section class="about-me">
+        <h2>About the Creator</h2>
+        <div class="creator">
+          <div>
+            <p>
+              Hi, I'm <strong>Pranav Kulkarni</strong>, a passionate developer with extensive expertise in full-stack development, cloud technologies, and artificial intelligence. With a strong foundation in backend and cloud computing, I have successfully built numerous projects that solve real-world problems, including an e-commerce platform for handmade artifacts, a fee management system for educational institutions, and an AI-powered learning management system. My experience spans cutting-edge technologies like Angular, Node.js, Firebase, and various AWS services, including EC2, S3, Polly, Transcribe, and Route 53, ensuring robust and scalable solutions for every project.
+            </p>
+            <p>
+              Driven by innovation, I’ve also developed unique tools like a cold email automation platform to streamline job applications and a bookkeeping system for small businesses. As a certified AWS Cloud Practitioner, I leverage the cloud to design efficient, scalable applications. I created NarratoGenie.AI to help educators, creators, and learners harness the power of AI for interactive storytelling. My ultimate goal is to make advanced technology accessible, practical, and impactful. Let’s connect and explore how we can create something extraordinary together!
+            </p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/pranav33/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/PranavKulkarni33" target="_blank">GitHub</a>
+              <a href="https://pranavfolio.com/" target="_blank">Portfolio</a>
+              <a href="mailto:kulkarnipranavmahesh@gmail.com">Email Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+  
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>Ready to Create?</h2>
+      <button class="cta-btn" (click)="navigateToUpload()">Try it Out Now</button>
+    </section>
+  </div>
+  

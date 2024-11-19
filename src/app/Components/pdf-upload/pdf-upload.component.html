@@ -1,30 +1,50 @@
-<div class="upload-container">
-  <div
-    class="drop-zone"
-    (dragover)="onDragOver($event)"
-    (dragleave)="onDragLeave($event)"
-    (drop)="onDrop($event)"
-  >
-    <div class="drop-message">
-      <i class="ai-icon"></i>
-      <p>Drag & Drop Your PDF Here</p>
-      <span>or</span>
-      <button (click)="fileInput.click()">Upload PDF</button>
-      <input
-        type="file"
-        #fileInput
-        accept=".pdf"
-        (change)="onFileSelect($event)"
-        hidden
-      />
+<div class="overlay">
+  <div class="header">
+    <h1>NarratoGenie.AI</h1>
+    <p>Learn anything with video</p>
+  </div>
+
+  <div class="content-container">
+    <!-- Demo Video -->
+    <div class="demo-video">
+      <video autoplay loop muted playsinline #demoVideo class="video-preview">
+        <source src="assets/movie.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button class="control-btn" (click)="toggleMute(demoVideo)">Mute</button>
     </div>
+
+    <!-- Upload Container -->
+    <div class="upload-container">
+      <div
+        class="drop-zone"
+        (dragover)="onDragOver($event)"
+        (dragleave)="onDragLeave($event)"
+        (drop)="onDrop($event)"
+      >
+        <div class="drop-message">
+          <i class="ai-icon"></i>
+          <p>Drag & Drop Your PDF Here</p>
+          <button (click)="fileInput.click()">Upload PDF</button>
+          <input
+            type="file"
+            #fileInput
+            accept=".pdf"
+            (change)="onFileSelect($event)"
+            hidden
+          />
+        </div>
+      </div>
+      <div class="file-preview" *ngIf="fileName">
+        <p><strong>File Selected:</strong> {{ fileName }}</p>
+        <p class="file-status">The uploaded file {{ fileName }}</p>
+        <button class="upload-btn" (click)="processPDF()">Process PDF</button>
+      </div>
+      <div *ngIf="isLoading" class="loader">
+        <p>Processing... Please wait.</p>
+      </div>
+    </div>
+    
   </div>
-  <div class="file-preview" *ngIf="fileName">
-    <p><strong>File Selected:</strong> {{ fileName }}</p>
-    <p class="file-status">The uploaded file {{ fileName }}</p>
-    <button class="upload-btn" (click)="processPDF()">Process PDF</button>
-  </div>
-  <div *ngIf="isLoading" class="loader">
-    <p>Processing... Please wait.</p>
-  </div>
+  <button class="control-btn" (click)="back()">Back</button>
 </div>

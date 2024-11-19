@@ -63,4 +63,12 @@ export class PdfUploadComponent {
       });
     }
   }
+
+  toggleMute(video: HTMLVideoElement): void {
+    video.muted = !video.muted;
+  }
+
+  back(){
+    this.router.navigate(['home']);
+  }
 }

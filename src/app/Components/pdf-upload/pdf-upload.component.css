@@ -1,22 +1,295 @@
+/* Fullscreen background image */
+
+
+/* Overlay for styling */
+.overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Transparent overlay for readability */
+}
+
+/* Header styling */
+.header {
+  
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(145deg, #ebebe7, #ffc001);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.header p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #00d2ff;
+}
+
+/* Content container to align demo video and upload container */
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+
+}
+
+/* Demo video styling */
+.demo-video {
+  width: 250px;
+  height: auto;
+  margin: 50px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.demo-video video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Upload container */
 .upload-container {
+  margin: 100px 20px;
+  background: rgba(26, 26, 46, 0.8);
+  border-radius: 10px;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.drop-zone {
+  width: 400px;
+  height: 200px;
+  border: 2px dashed #6a5acd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.drop-zone:hover {
+  background-color: #21295c;
+  transform: scale(1.02);
+}
+
+.drop-message {
+  text-align: center;
+  color: #ffffff;
+}
+
+.drop-message .ai-icon {
+  font-size: 48px;
+  color: #00d2ff;
+}
+
+.drop-message p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.drop-message span {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00d2ff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0077b6;
+}
+
+.file-preview {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.file-preview p {
+  margin: 5px 0;
+}
+
+.file-preview .file-status {
+  font-size: 14px;
+  color: #00d2ff;
+}
+
+.upload-btn {
+  margin-top: 10px;
+  background-color: #00c851;
+}
+
+.upload-btn:hover {
+  background-color: #007e33;
+}
+
+.loader {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.control-btn {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00d2ff;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.control-btn:hover {
+  background-color: #0077b6;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .content-container {
+    gap: 15px;
+  }
+
+  .demo-video {
+    max-width: 250px;
+  }
+
+  .control-btn {
+    font-size: 10px;
+    padding: 4px 12px;
+  }
+
+  .upload-container {
+    max-width: 250px;
+  }
+
+  .drop-zone {
+    height: 120px;
+  }
+
+  .drop-message p {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  .file-preview .file-status {
+    font-size: 10px;
+  }
+
+  .loader {
+    font-size: 12px;
+  }
+
+  .overlay {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    font-family: "Roboto", sans-serif;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Transparent overlay for readability */
   }
   
+  /* Header styling */
+  .header h1 {
+    font-size: 2.5rem; /* Reduced size for smaller screens */
+    font-weight: bold;
+    color: white;
+  }
+  
+  .header p {
+    font-size: 1.2rem; /* Reduced size for smaller screens */
+    margin-top: 10px;
+    color: #00d2ff;
+  }
+  
+  /* Content container to align demo video and upload container */
+  .content-container {
+    display: flex;
+    flex-direction: column; /* Stacked on mobile screens */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Reduced gap for smaller screens */
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* Demo video styling */
+  .demo-video {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 200px; /* Constrained size for mobile */
+    margin: 5px auto; /* Centered on mobile screens */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .demo-video video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Upload container */
+  .upload-container {
+    width: 100%; /* Full width for mobile */
+    max-width: 300px; /* Constrained size */
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Drop zone */
   .drop-zone {
-    width: 80%;
-    max-width: 500px;
-    height: 200px;
+    width: 100%; /* Full width for mobile */
+    height: 150px; /* Reduced height for smaller screens */
     border: 2px dashed #6a5acd;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(145deg, #1a1a2e, #16213e);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease-in-out, transform 0.2s;
   }
   
@@ -25,35 +298,31 @@
     transform: scale(1.02);
   }
   
+  /* Drop message styling */
   .drop-message {
     text-align: center;
     color: #ffffff;
   }
   
   .drop-message .ai-icon {
-    font-size: 48px;
+    font-size: 36px; /* Reduced size for smaller screens */
     color: #00d2ff;
   }
   
   .drop-message p {
-    font-size: 18px;
+    font-size: 16px; /* Reduced size for smaller screens */
     font-weight: bold;
     margin: 10px 0;
   }
   
-  .drop-message span {
-    font-size: 14px;
-    color: #aaaaaa;
-  }
-  
   button {
-    padding: 10px 20px;
+    padding: 8px 15px; /* Reduced size for smaller screens */
     border: none;
     border-radius: 5px;
     background-color: #00d2ff;
     color: white;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px; /* Reduced size for smaller screens */
     font-weight: bold;
   }
   
@@ -62,7 +331,7 @@
   }
   
   .file-preview {
-    margin-top: 20px;
+    margin-top: 15px; /* Reduced margin for smaller screens */
     color: white;
     text-align: center;
   }
@@ -72,7 +341,7 @@
   }
   
   .file-preview .file-status {
-    font-size: 14px;
+    font-size: 12px; /* Reduced size for smaller screens */
     color: #00d2ff;
   }
   
@@ -84,4 +353,4 @@
   .upload-btn:hover {
     background-color: #007e33;
   }
-  
+}

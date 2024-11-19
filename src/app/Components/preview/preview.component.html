@@ -1,8 +1,23 @@
+<div class="header">
+  <h1>NarratoGenie.AI</h1>
+</div>
+
 <div class="preview-container" *ngIf="videoUrl">
-    <h2>Processed Video</h2>
-    <video controls [src]="videoUrl" class="video-preview"></video>
+  <h2>Processed Video</h2>
+  <div class="video-wrapper">
+    <video autoplay muted loop playsinline #videoPlayer class="video-preview">
+      <source [src]="videoUrl" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="controls">
+      <button class="control-btn" (click)="toggleMute(videoPlayer)">Mute</button>
+      <button class="control-btn" (click)="downloadVideo()">Download</button>
+    </div>
   </div>
-  <div *ngIf="!videoUrl">
-    <p>No video available to preview.</p>
-  </div>
-  
+  <button class="create-another-btn" (click)="navigateToUpload()">Create Another One</button>
+</div>
+
+<div *ngIf="!videoUrl" class="no-video-container">
+  <p class="no-video">No video available to preview.</p>
+  <button class="create-another-btn" (click)="navigateToUpload()">Create Another One</button>
+</div>

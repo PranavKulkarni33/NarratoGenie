@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-interactive-narrative',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./interactive-narrative.component.css']
 })
 export class InteractiveNarrativeComponent {
+  constructor(private router: Router) {}
+
+  navigateToUpload(): void {
+    this.router.navigate(['/upload']);
+  }
 
 }
